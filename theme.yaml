@@ -1,8 +1,8 @@
-name: "MegaKit"
-description: "A multipurpose theme based on Bootstrap 4. Ported to OctoberCMS , designed and developed by themefisher"
-author: Themefisher
-homepage: "https://themefisher.com"
-code: megakit
+name: "Unicut Plus"
+description: "Unicut Plus theme based on MegaKit"
+author: "Jagu s.r.o."
+homepage: "www.jagu.cz"
+code: unicut-plus-jagu-oc-theme
 form: config/fields.yaml
 require:
     - RainLab.Blog
