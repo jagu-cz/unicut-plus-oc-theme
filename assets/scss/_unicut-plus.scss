@@ -10,3 +10,17 @@
         }
     }
 }
+
+.footer {
+    .copyright {
+        font-size: small;
+        .jagulogo-jagu-line {
+            &:before {
+                font-size: 150%;
+                margin: 0 5px;
+                top: 5px;
+                position: relative;
+            }
+        }
+    }
+}
