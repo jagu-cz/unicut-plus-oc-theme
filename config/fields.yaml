@@ -1,19 +1,43 @@
 tabs:
-  fields:
-
-    ####################################################
-    # Tab: 1.0 General Settings
-    ####################################################
-    
-    theme_info_section:
-      tab: "General"
-      label: "Info"
-      type: section
-      comment: "General Informations"
-      cssClass: "p-a m-y control-scrollpanel"
-
-    theme_site_name:
-      tab: "General"
-      label: "Website Name"
-      type: text
-      default: "MegaKit"
+    fields:
+        ####################################################
+        # General
+        ####################################################
+        company_name_section:
+            tab: Obecné
+            label: Název společnosti
+            type: section
+        company_first_name:
+            tab: Obecné
+            label: První část názvu
+            type: text
+            span: left
+        company_last_name:
+            tab: Obecné
+            label: Druhá část názvu
+            type: text
+            span: right
+        company_logo_section:
+            tab: Obecné
+            label: Logo společnosti
+            type: section
+        company_logo:
+            tab: Obecné
+            label: Logo společnosti
+            type: fileupload
+            mode: image
+        ####################################################
+        # Contact
+        ####################################################
+        contact_section:
+            tab: Kontakt
+            label: Kontakt
+            type: section
+        contact_email:
+            tab: Kontakt
+            label: Kontaktní e-mail
+            type: email
+        contact_phone:
+            tab: Kontakt
+            label: Kontaktní telefon
+            type: text
