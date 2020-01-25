@@ -1,0 +1,45 @@
+pagetitle:
+    name: Nadpis stránky
+    description: Nadpis stránky
+    icon: icon-flag
+    fields:
+        pagetitle_section:
+            label: Nadpis stránky
+            type: section
+        pagetitle_title:
+            label: Nadpis
+            type: text
+
+contact:
+    name: Kontakt
+    description: Kontakt
+    icon: icon-envelope
+    fields:
+        contact_section:
+            label: Kontakt
+            type: section
+        contact_address_blocks:
+            prompt: Přidat adresní blok
+            type: repeater
+            form:
+                fields:
+                    section:
+                        label: Adresní blok
+                        type: section
+                    title:
+                        label: Nadpis
+                        type: text
+                    rows:
+                        prompt: Přidat řádek
+                        type: repeater
+                        form:
+                            fields:
+                                icon:
+                                    label: Ikona
+                                    comment: https://themify.me/themify-icons
+                                    type: text
+                                    span: left
+                                text:
+                                    label: Text
+                                    type: text
+                                    span: right

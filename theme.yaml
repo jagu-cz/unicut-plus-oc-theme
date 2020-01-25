@@ -6,4 +6,5 @@ code: unicut-plus-jagu-oc-theme
 form: config/fields.yaml
 require:
     - RainLab.Blog
+    - RainLab.Pages
     - Martin.Forms

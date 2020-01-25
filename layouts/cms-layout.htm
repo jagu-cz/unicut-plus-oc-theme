@@ -1,5 +1,25 @@
-;;
 description = "CMS Layout"
+
+[childPages]
+
+[staticBreadcrumbs]
+
+[staticPage]
+useContent = 0
+default = 0
+
+[staticMenu]
+code = "main-menu"
+
+[genericForm]
+messages_success = "Váš dotaz byl úspěšně odeslán!"
+messages_errors = "Během odesílání vašeho dotazu došlo k neočekávané chybě."
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
 ==
 {##}
 <!doctype html>
@@ -12,7 +32,15 @@ description = "CMS Layout"
 {# Header with TopBar #}
 {% partial 'site/header.htm' %}
 <div class="main-wrapper">{# Main Wrapper #}
-{% page %}
+{# Repeater #}
+{% set blocksPath = 'meta/blocks.yaml'|theme %}
+{repeater name="sections" groups="~/themes/mehedi-megakit/meta/blocks.yaml" tab="Blocks"}
+    {variable name="_dummy" type="text"}{/variable}
+{/repeater}
+{# Render blocks #}
+{% for section in sections %}
+    {% partial 'blocks/' ~ section._group data=section %}
+{% endfor %}
 {% partial 'site/footer.htm' %}
 </div>{# End Main Wrapper #}
 

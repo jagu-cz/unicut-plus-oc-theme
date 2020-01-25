@@ -1,0 +1,29 @@
+description = "Page title"
+
+[viewBag]
+==
+<section class="contact contact-form-wrap section">
+    <div class="container">
+        <div class="row">
+            {% for block in data.contact_address_blocks %}
+                <div class="col">
+                    <div class="contact-content pl-lg-5 mt-5 mt-lg-0">
+                        <ul class="address-block list-unstyled">
+                            <li class="address-block-title">{{ block.title }}</li>
+                            {% for row in block.rows %}
+                                <li>
+                                    <i class="{{ row.icon }} mr-3"></i>
+                                    {{ row.text }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+
+            <div class="col">
+                {% component 'genericForm' %}
+            </div>
+        </div>
+    </div>
+</section>
