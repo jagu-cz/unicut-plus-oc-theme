@@ -3,22 +3,41 @@ pagetitle:
     description: Nadpis stránky
     icon: icon-flag
     fields:
-        pagetitle_section:
+        section:
             label: Nadpis stránky
             type: section
-        pagetitle_title:
+        title:
             label: Nadpis
             type: text
+
+pagebanner:
+    name: Banner stránky
+    description: Banner stránky s nadpisem
+    icon: icon-thumb-tack
+    fields:
+        section:
+            label: Banner stránky
+            type: section
+        subtitle:
+            label: Menší nadpis
+            type: text
+        title:
+            label: Nadpis
+            type: text
+        background:
+            label: Obrázek na pozadí
+            type: mediafinder
+            mode: image
 
 contact:
     name: Kontakt
     description: Kontakt
     icon: icon-envelope
     fields:
-        contact_section:
+        section:
             label: Kontakt
             type: section
-        contact_address_blocks:
+        address_blocks:
             prompt: Přidat adresní blok
             type: repeater
             form:
