@@ -29,6 +29,33 @@ pagebanner:
             type: mediafinder
             mode: image
 
+downloads:
+    name: Ke stažení
+    description: Soubory ke stažení
+    icon: icon-cloud-download
+    fields:
+        section:
+            label: Ke stažení
+            type: section
+        files:
+            prompt: Přidat soubor ke stažení
+            type: repeater
+            form:
+                fields:
+                    section:
+                        label: Soubor ke stažení
+                        type: section
+                    title:
+                        label: Nadpis
+                        type: text
+                    description:
+                        label: Popis
+                        type: richeditor
+                        size: small
+                    file:
+                        label: Soubor
+                        type: mediafinder
+                        mode: file
 contact:
     name: Kontakt
     description: Kontakt
