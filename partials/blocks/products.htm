@@ -1,0 +1,29 @@
+description = "Produkty"
+
+[viewBag]
+==
+<section class="section" style="background-color: {{ data.background }}">
+    <div class="products container">
+        {% if data.title %}
+            <div class="section-title">
+                <h3>{{ data.title }}</h3>
+            </div>
+        {% endif %}
+        <div class="row justify-content-center">
+            {% for product in data.products %}
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <a href="{{ product.link }}">
+                        <div class="card h-100">
+                            <div class="card-img-top"
+                                 style="background-image: url('{{ product.image|media }}')"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.title }}</h5>
+                                <span class="card-text">{{ product.description|raw }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

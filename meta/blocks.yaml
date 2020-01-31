@@ -38,20 +38,20 @@ editor:
             label: Editor
             type: section
         background:
-            label: Background
+            label: Pozadí
             type: colorpicker
             availableColors: ["#919194", "#D9D9D9", "#EDEDED", "#F2F2F2", "#17A554", "#82CB38", "#E6F3CE", "#FFFFFF"]
             default: "#ffffff"
         editors:
             type: repeater
-            prompt: Add Content
+            prompt: Přidat obsah
             form:
                 fields:
                     section:
-                        label: Content
+                        label: Obsah
                         type: section
                     size:
-                        label: Editor Size
+                        label: Velikost
                         type: balloon-selector
                         span: full
                         options:
@@ -65,6 +65,45 @@ editor:
                         size: large
                         span: full
 
+products:
+    name: Produkty
+    description: Náhledy produktů s prokliky na jejich detail
+    icon: icon-list-ul
+    fields:
+        section:
+            label: Produkty
+            type: section
+        title:
+            label: Nadpis
+            type: text
+        background:
+            label: Pozadí
+            type: colorpicker
+            availableColors: ["#919194", "#D9D9D9", "#EDEDED", "#F2F2F2", "#17A554", "#82CB38", "#E6F3CE", "#FFFFFF"]
+            default: "#ffffff"
+        products:
+            type: repeater
+            prompt: Add product
+            form:
+                fields:
+                    section:
+                        label: Produkt
+                        type: section
+                    title:
+                        label: Nadpis
+                        type: text
+                    description:
+                        label: Popis
+                        type: richeditor
+                        size: small
+                    link:
+                        label: Odkaz
+                        type: text
+                    image:
+                        label: Obrázek
+                        type: mediafinder
+                        mode: image
+
 downloads:
     name: Ke stažení
     description: Soubory ke stažení
@@ -77,7 +116,7 @@ downloads:
             label: Nadpis
             type: text
         background:
-            label: Background
+            label: Pozadí
             type: colorpicker
             availableColors: ["#919194", "#D9D9D9", "#EDEDED", "#F2F2F2", "#17A554", "#82CB38", "#E6F3CE", "#FFFFFF"]
             default: "#ffffff"

@@ -7,6 +7,12 @@ body {
     margin-bottom: 60px;
 }
 
+.box-shadow {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
 #navbar {
     .navbar-brand {
         span {
@@ -100,6 +106,31 @@ section {
     .editor-item {
         h1, h2, h3, h4, h5, h6 {
             color: #8DBB44;
+        }
+    }
+}
+
+.products {
+    a {
+        .card {
+            color: #6C757D;
+
+            h5 {
+                color: #8DBB44;
+            }
+
+            &:hover {
+                @extend .box-shadow;
+                color: #6C757D;
+            }
+
+            .card-img-top {
+                width: 100%;
+                padding-bottom: 80%; // 5/4 aspect ratio
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
         }
     }
 }
