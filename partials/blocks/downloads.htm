@@ -3,16 +3,23 @@ description = "Downloads"
 [viewBag]
 ==
 <section class="section">
-    <div class="container">
+    <div class="downloads container">
+        {% if data.title %}
+            <div class="section-title">
+                <h3>{{ data.title }}</h3>
+            </div>
+        {% endif %}
         <div class="row justify-content-center">
             {% for item in data.files %}
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6 mb-3">
                     <div class="card text-center mb-md-0 mb-3 h-100">
-                        <div class="card-body py-5">
+                        <div class="card-body pt-4 pb-0">
                             <div class="pricing-header">
-                                <h3>{{ item.title }}</h3>
-                                <p class="text-muted">{{ item.description|raw }}</p>
+                                <h5>{{ item.title }}</h5>
+                                <span class="text-muted">{{ item.description|raw }}</span>
                             </div>
+                        </div>
+                        <div class="card-footer pt-0 pb-4">
                             <a href="{{ item.file|media }}"
                                class="btn btn-small btn-solid-border btn-round-full"
                                download

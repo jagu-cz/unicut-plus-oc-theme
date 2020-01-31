@@ -37,6 +37,9 @@ downloads:
         section:
             label: Ke stažení
             type: section
+        title:
+            label: Nadpis
+            type: text
         files:
             prompt: Přidat soubor ke stažení
             type: repeater

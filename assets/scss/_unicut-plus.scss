@@ -51,9 +51,26 @@ section {
 }
 
 // blocks
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 .pagetitle {
     h1 {
         margin-top: 2rem;
+    }
+}
+
+.pagebanner {
+}
+
+.downloads {
+    .card {
+        .card-footer {
+            background-color: #fff;
+            border-top: none;
+        }
     }
 }
 
@@ -64,3 +81,4 @@ section {
         }
     }
 }
+
