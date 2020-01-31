@@ -29,6 +29,42 @@ pagebanner:
             type: mediafinder
             mode: image
 
+editor:
+    name: Editor
+    description: Textový editor na vytvoření libovolnéo obsahu
+    icon: icon-align-left
+    fields:
+        section:
+            label: Editor
+            type: section
+        background:
+            label: Background
+            type: colorpicker
+            availableColors: ["#919194", "#D9D9D9", "#EDEDED", "#F2F2F2", "#17A554", "#82CB38", "#E6F3CE", "#FFFFFF"]
+            default: "#ffffff"
+        editors:
+            type: repeater
+            prompt: Add Content
+            form:
+                fields:
+                    section:
+                        label: Content
+                        type: section
+                    size:
+                        label: Editor Size
+                        type: balloon-selector
+                        span: full
+                        options:
+                            col-lg-12 col-md-12: Celá šířka
+                            col-lg-6 col-md-12: 1/2 šířky
+                            col-lg-4 col-md-12: 1/3 šířky
+                            col-lg-3 col-md-12: 1/4 šířky
+                    editor:
+                        label: Editor
+                        type: richeditor
+                        size: large
+                        span: full
+
 downloads:
     name: Ke stažení
     description: Soubory ke stažení
@@ -40,6 +76,11 @@ downloads:
         title:
             label: Nadpis
             type: text
+        background:
+            label: Background
+            type: colorpicker
+            availableColors: ["#919194", "#D9D9D9", "#EDEDED", "#F2F2F2", "#17A554", "#82CB38", "#E6F3CE", "#FFFFFF"]
+            default: "#ffffff"
         files:
             prompt: Přidat soubor ke stažení
             type: repeater
