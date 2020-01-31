@@ -49,8 +49,26 @@ description = "Header with TopBar and Navigation"
             <div class="collapse navbar-collapse text-center" id="navbarsExample09">
                 <ul class="navbar-nav ml-auto">
                     {% for item in staticMenu.menuItems %}
-                        <li class="nav-item {% if item.isActive %}active{% endif %}">
-                            <a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
+                        <li class="nav-item dropdown {% if item.isActive or item.isChildActive %}active{% endif %}">
+                            <a class="nav-link dropdown-toggle"
+                               data-hover="dropdown"
+                               href="{{ item.url }}"
+                            >
+                                {{ item.title }}
+                            </a>
+                            {% if item.items %}
+                                <ul class="dropdown-menu">
+                                    {% for subitem in item.items %}
+                                        <li class="nav-item {% if subitem.isActive %}active{% endif %}">
+                                            <a href="{{ subitem.url }}"
+                                               class="nav-link"
+                                            >
+                                                {{ subitem.title }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
                         </li>
                     {% endfor %}
                 </ul>

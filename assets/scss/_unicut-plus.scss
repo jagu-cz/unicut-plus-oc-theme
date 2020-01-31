@@ -18,6 +18,32 @@ body {
             height: 2rem;
         }
     }
+
+    .nav-item {
+        &.active {
+            .nav-link {
+                color: #8DBB44
+            }
+        }
+    }
+
+    .dropdown-menu {
+        .nav-item {
+            .nav-link {
+                color: #222328;
+
+                &:hover {
+                    color: #8DBB44;
+                }
+            }
+
+            &.active {
+                .nav-link {
+                    color: #8DBB44;
+                }
+            }
+        }
+    }
 }
 
 #footer {

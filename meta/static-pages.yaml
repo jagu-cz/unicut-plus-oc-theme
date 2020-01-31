@@ -1,0 +1,6 @@
+static-pages:
+    index: {  }
+    produkty:
+        produkty-automaticky-otvirac-oken: {  }
+        produkty-opravy-otviracu: {  }
+    kontakt: {  }

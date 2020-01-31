@@ -1,0 +1,35 @@
+name: 'Main menu'
+items:
+    -
+        title: Úvod
+        nesting: '1'
+        type: static-page
+        code: ''
+        reference: index
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Produkty
+        nesting: '1'
+        type: static-page
+        code: ''
+        reference: produkty
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kontakt
+        nesting: '1'
+        type: static-page
+        code: ''
+        reference: kontakt
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
