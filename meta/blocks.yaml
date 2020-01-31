@@ -104,6 +104,43 @@ products:
                         type: mediafinder
                         mode: image
 
+gallery:
+    name: Galerie
+    description: Galerie
+    icon: icon-picture-o
+    fields:
+        section:
+            label: Galerie
+            type: section
+        title:
+            label: Nadpis
+            type: text
+        background:
+            label: Pozadí
+            type: colorpicker
+            availableColors: ["#919194", "#D9D9D9", "#EDEDED", "#F2F2F2", "#17A554", "#82CB38", "#E6F3CE", "#FFFFFF"]
+            default: "#ffffff"
+        photos:
+            prompt: Přidat fotografii
+            type: repeater
+            form:
+                fields:
+                    section:
+                        label: Fotografie
+                        type: section
+                    name:
+                        label: Název
+                        type: text
+                        span: left
+                    description:
+                        label: Popis
+                        type: text
+                        span: right
+                    photo:
+                        label: Photo
+                        type: mediafinder
+                        mode: image
+
 downloads:
     name: Ke stažení
     description: Soubory ke stažení

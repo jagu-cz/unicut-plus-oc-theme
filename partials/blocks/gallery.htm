@@ -1,0 +1,33 @@
+description = "Galerie"
+
+[viewBag]
+==
+<div class="gallery">
+    <section class="section" style="background-color: {{ data.background }}">
+        <div class="container">
+            <div class="section-title">
+                <h3>{{ data.title }}</h3>
+            </div>
+
+            <div class="row portfolio-gallery">
+                {% for photo in data.photos %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="portflio-item position-relative mb-4">
+                            <a href="{{ photo.photo|media }}" class="popup-gallery">
+                                <div style="background-image: url('{{ photo.photo|media }}')"
+                                     class="img-fluid w-100"
+                                >
+                                    <i class="ti-plus overlay-item"></i>
+                                    <div class="portfolio-item-content">
+                                        <h3 class="mb-0 text-white">{{ photo.name }}</h3>
+                                        <p class="text-white-50">{{ photo.description }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>

@@ -14,8 +14,7 @@ description = "Produkty"
                 <div class="col-md-4 col-sm-6 mb-3">
                     <a href="{{ product.link }}">
                         <div class="card h-100">
-                            <div class="card-img-top"
-                                 style="background-image: url('{{ product.image|media }}')"></div>
+                            <div class="card-img-top" style="background-image: url('{{ product.image|media }}')"></div>
                             <div class="card-body">
                                 <h5 class="card-title">{{ product.title }}</h5>
                                 <span class="card-text">{{ product.description|raw }}</span>
