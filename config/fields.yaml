@@ -1,9 +1,20 @@
 tabs:
     fields:
         ####################################################
+        # Theme
+        ####################################################
+        theme_section:
+            tab: Šablona
+            label: Šablona
+            type: section
+        theme_site_name:
+            tab: Šablona
+            label: Název webu
+            type: text
+        ####################################################
         # General
         ####################################################
-        company_name_section:
+        company_section:
             tab: Obecné
             label: Název společnosti
             type: section
