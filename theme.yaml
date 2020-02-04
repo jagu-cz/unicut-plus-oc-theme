@@ -8,3 +8,4 @@ require:
     - RainLab.Blog
     - RainLab.Pages
     - Martin.Forms
+    - Raideer.Thumbnail

@@ -151,6 +151,21 @@ section {
     }
 }
 
+.technologies {
+    .technology-icon {
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    h4 {
+        color: #8DBB44;
+    }
+}
+
 .downloads {
     .card {
         .card-footer {
