@@ -5,6 +5,58 @@ description = "Footer Partial"
 {# Footer Start #}
 <footer id="footer" class="footer section">
     <div class="container">
+        <div class="row">
+            {# Links #}
+            <div class="col-md-4 col-sm-12">
+                <div class="widget">
+                    <h4 class="mb-4">Rychlé odkazy</h4>
+                    <ul class="list-unstyled footer-menu lh-35">
+                        {% for item in staticMenu.menuItems %}
+                            <li>
+                                <a href="{{ item.url }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {# Contact us #}
+            <div class="col-md-4 col-sm-12">
+                <div class="widget">
+                    <h4 class="mb-4 logo">
+                        Kontaktujte nás
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="ti-mobile mr-3"></i>
+                            <a href="tel:{{ this.theme.contact_phone }}">{{ this.theme.contact_phone }}</a>
+                        </li>
+                        <li>
+                            <i class="ti-email mr-3"></i>
+                            <a href="mailto:{{ this.theme.contact_email }}">{{ this.theme.contact_email }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {# Address #}
+            <div class="col-md-4 col-sm-12">
+                <div class="widget">
+                    <h4 class="mb-4 logo">
+                        {{ this.theme.company_first_name }}
+                        <span>{{ this.theme.company_last_name }}</span>
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="ti-user mr-3"></i>
+                            {{ this.theme.contact_name }}
+                        </li>
+                        <li>
+                            <i class="ti-home mr-3"></i>
+                            {{ this.theme.contact_address }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="footer-btm py-3">
             <div class="row">
                 <div class="col-12">

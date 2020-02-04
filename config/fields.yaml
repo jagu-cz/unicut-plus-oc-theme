@@ -41,3 +41,11 @@ tabs:
             tab: Kontakt
             label: Kontaktní telefon
             type: text
+        contact_name:
+            tab: Kontakt
+            label: Jméno a příjmení
+            type: text
+        contact_address:
+            tab: Kontakt
+            label: Adresa
+            type: text
