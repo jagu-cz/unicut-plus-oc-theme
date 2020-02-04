@@ -42,6 +42,9 @@ editor:
             type: colorpicker
             availableColors: ["#919194", "#D9D9D9", "#EDEDED", "#F2F2F2", "#17A554", "#82CB38", "#E6F3CE", "#FFFFFF"]
             default: "#ffffff"
+        title:
+            label: Nadpis
+            type: text
         editors:
             type: repeater
             prompt: Přidat obsah
@@ -212,6 +215,7 @@ downloads:
                         label: Soubor
                         type: mediafinder
                         mode: file
+
 contact:
     name: Kontakt
     description: Kontakt

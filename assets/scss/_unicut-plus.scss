@@ -161,6 +161,17 @@ section {
     }
 }
 
+
+.services {
+    .about-item-img {
+        width: 100%;
+        padding-bottom: 56.25%; // 3:2 aspect ratio
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
 .downloads {
     .card {
         .card-footer {

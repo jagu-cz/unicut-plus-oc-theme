@@ -5,6 +5,11 @@ description = "Editor"
 <div class="editor">
     <section class="section" style="background-color: {{ data.background }}">
         <div class="container">
+            {% if data.title %}
+                <div class="section-title">
+                    <h3>{{ data.title }}</h3>
+                </div>
+            {% endif %}
             <div class="w-100">
                 <div class="row">
                     {% for editor in data.editors %}
