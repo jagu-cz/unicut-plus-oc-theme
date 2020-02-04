@@ -216,6 +216,24 @@ downloads:
                         type: mediafinder
                         mode: file
 
+interest:
+    name: Máte zájem?
+    description: Banner s odkazem na kontakt
+    icon: icon-question
+    fields:
+        section:
+            label: Máte zájem?
+            type: section
+        text:
+            label: Menší nadpis
+            type: text
+        title:
+            label: Větší nadpis
+            type: text
+        link:
+            label: Odkaz tlačítka
+            type: text
+
 contact:
     name: Kontakt
     description: Kontakt
