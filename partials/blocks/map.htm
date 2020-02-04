@@ -1,0 +1,23 @@
+description = "Mapička"
+
+[viewBag]
+==
+<section class="section">
+    <div class="{% if not data.full_width %}container{% endif %}">
+        <div id="map" style="width:100%; height:450px;"></div>
+        <script type="text/javascript">
+            let center = SMap.Coords.fromWGS84({{ data.longitude }}, {{ data.latitude }});
+            let map = new SMap(JAK.gel("map"), center, {{ data.zoom }});
+            map.addDefaultLayer(SMap.DEF_BASE).enable();
+            map.addDefaultControls();
+
+            let layer = new SMap.Layer.Marker();
+            map.addLayer(layer);
+            layer.enable();
+
+            let options = {};
+            let marker = new SMap.Marker(center, "marker", options);
+            layer.addMarker(marker);
+        </script>
+    </div>
+</section>
